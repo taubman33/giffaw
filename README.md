@@ -17,12 +17,12 @@ Your site should look something like:
 
 ## Introduction
 
-You're about to write a lot of AJAX-backed JavaScript using jQuery that will complete our little Gif app.
+We'll practice using `fetch` by making some requests to the Giphy API and updating the DOM with data recieved in the response.
 
-Make use of the fantastic Giphy api:
+API Homepage:
 http://api.giphy.com/
 
-Check out the documentation here:
+API documentation here:
 https://developers.giphy.com/docs/
 
 #### Thinking Like An Engineer
@@ -41,59 +41,22 @@ Here's some steps to follow to help get you in this mindset:
 	- Go to http://api.giphy.com/v1/gifs/search?q=cats&api_key=dc6zaTOxFJmzC. This is the API request for the search term `cats`.
 	- What do you see? It's a JSON Object!
 
-3. Clone this project. We first want to write jQuery that returns and `console.log()`s that same object we saw when we opened the API in our browser. BUT HOW DO I AJAX!!??
-	- Look at this example of an `$.ajax` request:
-	```js
-	$.ajax({
-
-		// What kind of request
-		method: "GET",
-
-		// The URL for the request
-		url: "http://api.api.com/search",
-
-		// The data to send aka query parameters
-		data: $("form").serialize(),
-
-		// Code to run if the request succeeds;
-		// the response is passed to the function
-		success: onSuccess,
-
-		// Code to run if the request fails; the raw request and
-		// status codes are passed to the function
-		error: onError
-	});
-
-	function onSuccess(json) {
-		$("div").append("<h1>"+json.title+"</h1>");
-	}
-
-	function onError(xhr, status, errorThrown) {
-		alert("Sorry, there was a problem!");
-		console.log("Error: " + errorThrown);
-		console.log("Status: " + status);
-		console.dir(xhr);
-	}
-	```
-	- How would you repurpose this to GET the data you want from the URL you want.
-		- What is your base API url? What are the query parameters?
-		- HINT: you need to `serialize()` your form data.
-
+3. Clone this project. 
 4. Start playing in your scripts/app.js file.
-	- Your first step is to make an Ajax call fire when your page loads. Don't try to do everything at once! First try to log the data to the console. Then work on logging specific data you want. What do you need to get the gifs to actually load on the page? There is a bunch of stuff in this data object and you need to figure out what you need.
+	- Your first step is to make a `fetch` request fire when your page loads. Don't try to do everything at once! First try to log the data to the console. Then work on logging specific data you want. What do you need to get the gifs to actually load on the page? There is a bunch of stuff in this data object and you need to figure out what you need.
 	- Once you narrowed that down, THEN you want to build functions that generate HTML Strings and `append()` them to the page.
 	- First log those strings to the console, and make sure they look like you think they should. THEN append them into the DOM!
 
-5. Can you bonus? Get the input box to make a different AJAX call to the search URL.
+5. Get the input box to make a different AJAX call to the search URL.
 	- Does a search box button have a default action? What do we want do with that?
 	- Are we just appending more and more gifs to the dom? Do we need to clear previous gifs before loading more?
-	- OMG are you making a one page app using AJAX like a boss?
 
-6. Can you super bonus? Add a `Load More` button that, when clicked, appends 25 more gifs to the bottom of the page.
+6. Add a `Load More` button that, when clicked, appends 25 more gifs to the bottom of the page.
 	- You will need to make use of the `offset` query parameter. See [Search Endpoint](https://github.com/Giphy/GiphyAPI#search-endpoint) section for more information.
 
-## Additional Resources
+## Bonus:
+Build a single model Express app that will allow a user to save their favourite gifs to a database and see them at the top of the page before any search results.
 
-- [http://youmightnotneedjquery.com](http://youmightnotneedjquery.com/)
-- [jQuery AJAX Docs](http://api.jquery.com/jquery.ajax/)
-- [Some useful jQuery DOM Manipulation Docs](http://api.jquery.com/prepend/)
+The wireframing, database design, and workflow are up to you. Have fun with it!
+
+
