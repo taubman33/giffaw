@@ -1,16 +1,12 @@
 # Giffaw
 
-Your goal is to integrate with the Giphy API.
-
-https://developers.giphy.com/docs/
-
-Basic Requirements:
+**Basic Requirements:**
 
 * A user can see the top 25 gifs (on page load)
 * A user can search for gifs, using the input field
-* Super Bonus: A user can "load more" gifs
+* A user can "load more" gifs
 
-Your site should look something like:
+Your site should look something like this:
 
 ![desktop layout](https://cloud.githubusercontent.com/assets/3010270/13936044/2ffadf60-ef78-11e5-95c5-55b8aefe68d6.png)
 
