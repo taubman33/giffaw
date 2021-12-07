@@ -36,9 +36,8 @@ Here's some steps to follow to help get you in this mindset:
 2. Test the API out in your browser!
 	- Go to http://api.giphy.com/v1/gifs/search?q=cats&api_key=dc6zaTOxFJmzC. This is the API request for the search term `cats`.
 	- What do you see? It's a JSON Object!
-
-3. Clone this project. 
-4. Start playing in your scripts/app.js file.
+	
+3. Start coding!
 	- Your first step is to make a `fetch` request fire when your page loads. Don't try to do everything at once! First try to log the data to the console. Then work on logging specific data you want. What do you need to get the gifs to actually load on the page? There is a bunch of stuff in this data object and you need to figure out what you need.
 	- Once you narrowed that down, THEN you want to build functions that generate HTML Strings and `append()` them to the page.
 	- First log those strings to the console, and make sure they look like you think they should. THEN append them into the DOM!
