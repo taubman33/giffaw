@@ -31,8 +31,7 @@ Here's some steps to follow to help get you in this mindset:
 
 1. Familiarize yourself with the [docs](https://github.com/Giphy/GiphyAPI)
 	- Specifically, we will be using the [search endpoint](https://github.com/Giphy/GiphyAPI#search-endpoint)
-		- Also note the ever-important API Key situation (We will be using the [Public Beta API key](https://github.com/Giphy/GiphyAPI#public-beta-key))
-
+		- Also note the ever-important API Key situation Check out https://giphy.com/login and then Create an account and sign in (totally free!). To get your beta key, set up an app by clicking the Create App in the navbar 
 2. Test the API out in your browser!
 	- Go to http://api.giphy.com/v1/gifs/search?q=cats&api_key=dc6zaTOxFJmzC. This is the API request for the search term `cats`.
 	- What do you see? It's a JSON Object!
